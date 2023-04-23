@@ -1,25 +1,20 @@
 def ikili_arama(dizi, hedef):
-    baslangic = 0
+    başlangic = 0
     son = len(dizi) - 1
     
-    while baslangic <= son:
-        orta = (baslangic + son) // 2 # orta elemanın indeksini hesapla
+    while başlangic <= son:
+        orta = (başlangic + son) // 2 # orta elemanın indeksini hesapla
         
         if dizi[orta] == hedef:
             return orta # hedef değeri bulunduğunda orta elemanın indeksini döndür
         
         if dizi[orta] < hedef:
-            baslangic = orta + 1 # hedef değer ortadan büyükse sağ yarıyı ele al
+            başlangic = orta + 1 # hedef değer ortadan büyükse sağ yarıyı ele al
         else:
             son = orta - 1 # hedef değer ortadan küçükse sol yarıyı ele al
             
     return -1 # hedef değeri dizide bulunamadığında -1 döndür
 
-dizi = [2, 5, 8, 12, 16, 23, 38, 45, 67, 89]
-hedef = 30
-sonuc = ikili_arama(dizi, hedef)
-
-if sonuc == -1:
-    print("Hedef değer dizide bulunamadi.")
-else:
-    print("Hedef değer dizinin indeksi:", sonuc)
+dizi = [1,4,9,10,22,30,35,43,45]
+hedef = 10
+print(ikili_arama(dizi,hedef))
