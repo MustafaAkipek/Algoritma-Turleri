@@ -1,15 +1,15 @@
 def ikili_arama(dizi, hedef):
-    başlangic = 0
+    baslangic = 0
     son = len(dizi) - 1
     
-    while başlangic <= son:
-        orta = (başlangic + son) // 2 # orta elemanın indeksini hesapla
+    while baslangic <= son:
+        orta = (baslangic + son) // 2 # orta elemanın indeksini hesapla
         
         if dizi[orta] == hedef:
             return orta # hedef değeri bulunduğunda orta elemanın indeksini döndür
         
         if dizi[orta] < hedef:
-            başlangic = orta + 1 # hedef değer ortadan büyükse sağ yarıyı ele al
+            baslangic = orta + 1 # hedef değer ortadan büyükse sağ yarıyı ele al
         else:
             son = orta - 1 # hedef değer ortadan küçükse sol yarıyı ele al
             
